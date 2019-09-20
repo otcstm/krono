@@ -1,5 +1,5 @@
 <?php
 
 return [
-    'site_title' => 'MyProject',
+    'site_title' => 'Welcome to Miowss',
 ];
