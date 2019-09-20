@@ -10,7 +10,7 @@
     </div>
     <div class="card">
         <div class="card-body login-card-body">
-            <p class="login-box-msg">Sign in to start your session</p>
+            <p class="login-box-msg">{{ trans('auth.login_title') }}</p>
             @if(\Session::has('message'))
                 <p class="alert alert-info">
                     {{ \Session::get('message') }}
@@ -20,7 +20,7 @@
                 {{ csrf_field() }}
                 <div class="form-group has-feedback">
                     <div class="input-group">
-                        <input type="email" class="form-control" placeholder="{{ trans('global.login_email') }}" name="email">
+                        <input type="text" class="form-control" placeholder="{{ trans('global.login_staff_no') }}" name="staff_no">
                     </div>
                 </div>
                 <div class="form-group has-feedback">
@@ -39,14 +39,6 @@
                     <!-- /.col -->
                 </div>
             </form>
-
-
-
-            <p class="mb-1">
-                <a class="" href="{{ route('password.request') }}">
-                    {{ trans('global.forgot_password') }}
-                </a>
-            </p>
             <p class="mb-0">
 
             </p>
