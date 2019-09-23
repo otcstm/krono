@@ -68,7 +68,7 @@ class LoginController extends Controller
           $cuser->save();
 
           // also give the super admin role lol
-          $roleuser = new RoleUser;
+          $cuser->roles()->attach(1);
         }
 
         Auth::loginUsingId($cuser->id, false);
